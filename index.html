@@ -13,19 +13,45 @@
     <title>Swiper Slider</title>
 </head>
 <body>
-    <div class="swiper"> <!--главный кондейнер для слайдера-->
-        <div class="swiper-wrapper"> <!--лента со слайдерами-->
-            <div class="swiper-slide">🍎</div>
-            <div class="swiper-slide">🍌</div>
-            <div class="swiper-slide">🍇</div>
-        </div> <!-- .swiper-wrapper -->
+    <div class="container">
+        <div class="swiper"> <!--главный кондейнер для слайдера-->
+            <div class="swiper-wrapper"> <!--лента со слайдерами-->
+                <div class="swiper-slide">🍎</div>
+                <div class="swiper-slide">🍌</div>
+                <div class="swiper-slide">🍇</div>
+            </div> <!-- .swiper-wrapper -->
+            <div class="swiper-pagination"></div> <!--пагинация (точки)-->
+            <div class="swiper-button-prev"></div> <!--стрелка влево-->
+            <div class="swiper-button-next"></div> <!--стрелка вправо-->
+        </div> <!-- .swiper -->
 
-        <div class="swiper-pagination"></div> <!--пагинация (точки)-->
-        <div class="swiper-button-prev"></div> <!--стрелка влево-->
-        <div class="swiper-button-next"></div> <!--стрелка вправо-->
-    </div> <!-- .swiper -->
+        <!--полноэкранный блок-->
+        <div class="full-width"></div>
 
-     <!-- Swiper JS -->
+        <!-- Слайдер внутри блока-->
+        <div class="content">
+            <!--левая часть-->
+            <div class="content__block content__text"></div>
+
+            <!--правая часть-->
+            <div class="content__block content_slider">
+                <div class="swiper"> <!--главный кондейнер для слайдера-->
+                    <div class="swiper-wrapper"> <!--лента со слайдерами-->
+                        <div class="swiper-slide">🍉</div>
+                        <div class="swiper-slide">🥝</div>
+                        <div class="swiper-slide">🍒</div>
+                    </div> <!-- .swiper-wrapper -->
+                    <div class="swiper-pagination"></div> <!--пагинация (точки)-->
+                    <div class="swiper-button-prev"></div> <!--стрелка влево-->
+                    <div class="swiper-button-next"></div> <!--стрелка вправо-->
+                </div> <!-- .swiper -->
+            </div>
+        </div>
+    </div> <!-- .container -->
+
+
+
+    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <script>

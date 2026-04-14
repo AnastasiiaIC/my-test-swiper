@@ -1,5 +1,15 @@
+body {
+    margin: 0;
+    overflow-x: hidden; /*при любом раскладе убираем горизонтальный скролл*/
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
 .swiper {
-    width: 30vw;
+    width: 30%;
     padding-bottom: 40px !important;
 }
 
@@ -24,8 +34,49 @@
     background:hotpink;
 }
 
+/*полноэкранный блок*/
+.full-width {
+    width: 100vw;
+    height: 10vw;
+    margin-top: 50px;
+    margin-left: calc(50% - 50vw); /*для того чтобы слева не было отступа по .container, перенести блок из центра контейнера в центр окна браузера*/
+    background-color: deeppink;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.content__block {
+    min-width: 0; /*обе строчки нужны для того чтобы grid-контейнер мог сжиматься, по умолчанию он этого не может*/
+    overflow: hidden;
+
+    min-height: 100px; /*просто для теста*/
+    padding: 20px;
+    background-color: rgba(255, 105, 180, 0.2);
+    border-radius: 20px;
+}
+
+.content .swiper {
+    width: 100%;
+    max-width: 100%;
+}
+
 @media (max-width: 991px) {
+    .container {
+        padding: 0 20px;
+    }
     .swiper {
         width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .content {
+        grid-template-columns: 1fr;
     }
 }
