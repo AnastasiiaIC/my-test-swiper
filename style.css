@@ -8,6 +8,22 @@
     text-align: center;
 }
 
+/*стрелки*/
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    color:hotpink;
+}
+
+/*активная точка*/
+.swiper-pagination-bullet-active {
+    background:hotpink;
+}
+
+/*неактивная точка*/
+.swiper-pagination-bullet {
+    background:hotpink;
+}
+
 @media (max-width: 991px) {
     .swiper {
         width: 100%;
