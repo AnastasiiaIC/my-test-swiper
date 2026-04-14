@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <title>Swiper Slider</title>
+</head>
+<body>
+    <div class="swiper"> <!--главный кондейнер для слайдера-->
+        <div class="swiper-wrapper"> <!--лента со слайдерами-->
+            <div class="swiper-slide">🍎</div>
+            <div class="swiper-slide">🍌</div>
+            <div class="swiper-slide">🍇</div>
+        </div> <!-- .swiper-wrapper -->
+
+        <div class="swiper-pagination"></div> <!--пагинация (точки)-->
+        <div class="swiper-button-prev"></div> <!--стрелка влево-->
+        <div class="swiper-button-next"></div> <!--стрелка вправо-->
+    </div> <!-- .swiper -->
+
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+        pagination: { el: '.swiper-pagination', clickable: true },
+    });
+    </script>
+</body>
+</html>

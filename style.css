@@ -1,0 +1,9 @@
+.swiper {
+    width: 30vw;
+    padding-bottom: 40px !important;
+}
+
+.swiper-slide {
+    font-size: 200px;
+    text-align: center;
+}
